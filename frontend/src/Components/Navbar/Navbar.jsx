@@ -14,6 +14,8 @@ const Navbar = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const isLoggedIn = true; // For example purposes, replace with actual login state
+
   return (
     <div className={`navbar ${isMenuOpen ? "open" : ""}`}>
       <img className="logo" src={logo} alt="Logo" />
@@ -33,6 +35,11 @@ const Navbar = () => {
         <a style={{ color: "white" }} onClick={toggleViewNearbyPosts}>
           {nearby}
         </a>
+        {isLoggedIn && (
+          <Link to="/login" className="profile-btn">
+            Logout
+          </Link>
+        )}
       </div>
       <div className="search">
         <Search />
