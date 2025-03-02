@@ -68,10 +68,10 @@ const postSchema = mongoose.Schema(
         required: true,
       },
     },
-    address: {
-      type: String,
-      required: true,
-    },
+    // address: {
+    //   type: String,
+    //   required: true,
+    // },
     isAvailable: {
       type: Boolean,
       default: true, // Set default availability to true
